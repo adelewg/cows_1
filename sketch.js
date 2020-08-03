@@ -225,7 +225,15 @@ function CowManager()
     {
         if(cows.length < this.minCows)
             {
-                cows.push(new Cow(width/2, height - 100));
+                if(random() < 0.5)
+                    {
+                        cows.push(new Cow(-200, height - 100));
+                    }
+                else
+                    {
+                        cows.push(new Cow(width + 200, height - 100));
+                    }
+               
             }
         for(var i = 0; i < cows.length; i++)
             {
